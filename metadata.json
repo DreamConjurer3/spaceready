@@ -1,0 +1,6 @@
+{
+  "name": "Space Dream - Space Readiness Profile",
+  "description": "Space Dream (team DreamLabs) for NASA Space Apps Challenge 2026: evaluates daily lifestyle habits against spaceflight countermeasures and generates your personalized Astronaut Readiness Card.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

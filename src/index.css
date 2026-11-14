@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+@keyframes techBorderPulse {
+  0%, 100% {
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 0 0px rgba(34, 211, 238, 0);
+  }
+  50% {
+    border-color: rgba(34, 211, 238, 0.42);
+    box-shadow: 0 0 6px rgba(34, 211, 238, 0.12);
+  }
+}
+
+.tech-border-animate {
+  animation: techBorderPulse 3.6s ease-in-out infinite;
+}
+
+@keyframes techDotSubtlePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.55;
+  }
+}
+
+.tech-dot-pulse {
+  animation: techDotSubtlePulse 3.6s ease-in-out infinite;
+}
