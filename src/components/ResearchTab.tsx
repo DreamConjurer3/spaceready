@@ -1,41 +1,7 @@
-import React, { useState } from 'react';
-import { ExternalLink, AlertTriangle, FileText, Download, Check } from 'lucide-react';
-
-const SUBMISSION_PDF_URL = '/Space-Ready-NASA-Space-Apps-2026-Submission.pdf';
-const SUBMISSION_PDF_FILENAME = 'Space-Ready-NASA-Space-Apps-2026-Submission.pdf';
+import React from 'react';
+import { ExternalLink, AlertTriangle, FileText } from 'lucide-react';
 
 export const ResearchTab: React.FC = () => {
-  const [downloading, setDownloading] = useState(false);
-  const [downloaded, setDownloaded] = useState(false);
-
-  const handleDownloadPdf = async () => {
-    if (downloading) return;
-    setDownloading(true);
-    try {
-      const res = await fetch(SUBMISSION_PDF_URL);
-      if (!res.ok) throw new Error('Failed to fetch PDF');
-      const blob = await res.blob();
-      const blobUrl = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = blobUrl;
-      link.download = SUBMISSION_PDF_FILENAME;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-      setTimeout(() => URL.revokeObjectURL(blobUrl), 2500);
-      setDownloaded(true);
-      setTimeout(() => setDownloaded(false), 3000);
-    } catch {
-      const link = document.createElement('a');
-      link.href = SUBMISSION_PDF_URL;
-      link.download = SUBMISSION_PDF_FILENAME;
-      document.body.appendChild(link);
-      link.click();
-      link.remove();
-    } finally {
-      setDownloading(false);
-    }
-  };
 
   return (
     <div className="max-w-3xl mx-auto space-y-10 py-4">
@@ -50,43 +16,8 @@ export const ResearchTab: React.FC = () => {
           Space-Ready: The Scientific Research
         </h1>
         <p className="text-zinc-400 mt-2 text-sm sm:text-base leading-relaxed">
-          Ground-based health readiness monitoring for astronauts during the pre-mission training window (2–4 years). Tracking 6 spaceflight pillars against L-60 baseline to detect drift before checkpoint failure. In-mission health monitoring analysis will be flawed without proper ground-based health metrics — hence, the importance of this preflight health monitoring tool for aboard long missions.
+          Ground-based health readiness monitoring for astronauts during the pre-mission training window (2–4 years). Tracking 6 spaceflight pillars against L-60 baseline to detect drift before checkpoint failure. In-mission health monitoring analysis will be flawed without proper ground-based health metrics — hence, the importance of this preflight health monitoring tool.
         </p>
-      </div>
-
-      {/* Downloadable Project Submission PDF Card */}
-      <div className="p-5 sm:p-6 rounded-2xl bg-zinc-950 border border-purple-500/40 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="space-y-1">
-          <div className="flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-purple-400 font-bold">
-            <FileText className="w-3.5 h-3.5" />
-            <span>Official Project Documentation · PDF</span>
-          </div>
-          <h2 className="text-base sm:text-lg font-bold font-['Chakra_Petch'] text-white uppercase tracking-wide">
-            NASA Space Apps Challenge 2026 Submission Brief
-          </h2>
-          <p className="text-xs text-zinc-400 leading-relaxed max-w-xl">
-            Complete 4-page dossier covering Project Summary, Technical Architecture, NASA OCHMO/OIG Data Integration, AI Disclosure, and Citations Box.
-          </p>
-        </div>
-
-        <button
-          type="button"
-          onClick={handleDownloadPdf}
-          disabled={downloading}
-          className="px-4 py-2.5 rounded-lg bg-purple-600 hover:bg-purple-500 disabled:opacity-60 text-white font-['Chakra_Petch'] font-bold text-xs tracking-wider uppercase flex items-center justify-center gap-2 transition cursor-pointer shrink-0 shadow-sm"
-        >
-          {downloaded ? (
-            <>
-              <Check className="w-4 h-4 text-emerald-300" />
-              <span>Downloaded</span>
-            </>
-          ) : (
-            <>
-              <Download className="w-4 h-4" />
-              <span>{downloading ? 'Preparing PDF...' : 'Download PDF'}</span>
-            </>
-          )}
-        </button>
       </div>
 
       {/* The Problem in One Sentence */}

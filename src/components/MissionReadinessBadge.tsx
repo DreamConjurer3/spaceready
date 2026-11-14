@@ -83,6 +83,14 @@ export const MissionReadinessBadge: React.FC<MissionReadinessBadgeProps> = ({
           aria-hidden="true"
         />
       </div>
+
+      {/* Visible AI Watermark Stamp */}
+      <span
+        className="absolute -bottom-1 right-0 z-30 px-1.5 py-[2px] rounded-[4px] bg-black/90 border border-amber-300/45 text-[8px] font-mono font-bold tracking-wider uppercase text-white/95 leading-none pointer-events-none select-none shadow-md"
+        aria-label="AI-generated image watermark"
+      >
+        AI · GEN
+      </span>
     </div>
   );
 };

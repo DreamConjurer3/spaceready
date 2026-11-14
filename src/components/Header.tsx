@@ -51,12 +51,20 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-14 border-b border-zinc-900">
           {/* Logo, App Title & Dropdown (Dropdown ONLY shown when on THE TOOL) */}
           <div className="flex items-center gap-2.5 sm:gap-3">
-            <div className="w-7 h-7 rounded-full border border-purple-500/30 overflow-hidden bg-purple-950/30 shrink-0">
-              <img
-                src="https://mystico-3.sirv.com/Gemini_Generated_Image_qa6je6qa6je6qa6j.jpeg?w=360&q=95"
-                alt="Space-Ready"
-                className="w-full h-full object-cover"
-              />
+            <div className="relative shrink-0" title="AI-Generated Logo">
+              <div className="w-7 h-7 rounded-full border border-purple-500/30 overflow-hidden bg-purple-950/30">
+                <img
+                  src="https://mystico-3.sirv.com/Gemini_Generated_Image_qa6je6qa6je6qa6j.jpeg?w=360&q=95"
+                  alt="Space-Ready (AI-Generated Logo)"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <span
+                className="absolute -bottom-1 -right-1.5 px-1 py-[1px] rounded-[3px] bg-black/90 border border-white/35 text-[7px] font-mono font-bold text-white/95 leading-none tracking-tighter pointer-events-none select-none shadow-sm"
+                aria-label="AI-generated image watermark"
+              >
+                AI
+              </span>
             </div>
 
             <div className="flex items-center gap-2 whitespace-nowrap">

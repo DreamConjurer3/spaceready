@@ -244,7 +244,7 @@ doc.y = 48 + bannerH + 16;
 drawSectionHeading('Section 01', 'Project Name & High-Level Summary');
 
 drawParagraph(
-  'Space-Ready is a web-based continuous ground health monitoring and readiness drift-detection tool I built for the NASA Space Apps Challenge 2026 (Team DreamLabs). Designed around the 2-to-4-year pre-mission astronaut training window, the application translates NASA Office of the Chief Health and Medical Officer (OCHMO) standards into a structured weekly checkup across six core spaceflight pillars: Sleep, Nutrition, Exercise, Stress, Social Connection, and Recovery.'
+  'Space-Ready is a web-based continuous ground health monitoring and readiness drift-detection tool we built for the NASA Space Apps Challenge 2026 (Team DreamLabs). Designed around the 2-to-4-year pre-mission astronaut training window, the application translates NASA Office of the Chief Health and Medical Officer (OCHMO) standards into a structured weekly checkup across six core spaceflight pillars: Sleep, Nutrition, Exercise, Stress, Social Connection, and Recovery.'
 );
 
 drawParagraph(
@@ -286,7 +286,7 @@ drawParagraph(
 drawSubheading('How Space-Ready Works');
 drawBullet(
   '1. Weekly 6-Pillar Checkup:',
-  'Each week, I structured a focused 30-question assessment (5 questions per pillar) scored on a 0–4 risk gradient (0 = optimal baseline behavior; 4 = severe acute deficit). Raw points per pillar (0–20) are inverted onto an intuitive 0–100% readiness scale via Score = Math.round(((20 − Raw) / 20) × 100).'
+  'Each week, we structured a focused 30-question assessment (5 questions per pillar) scored on a 0–4 risk gradient (0 = optimal baseline behavior; 4 = severe acute deficit). Raw points per pillar (0–20) are inverted onto an intuitive 0–100% readiness scale via Score = Math.round(((20 − Raw) / 20) × 100).'
 );
 drawBullet(
   '2. Temporal Smoothing & Weighted Composite Engine:',
@@ -330,20 +330,20 @@ drawCalloutBox(
 drawSectionHeading('Section 03', 'Space Agency Data Usage');
 
 drawParagraph(
-  'Rather than simply quoting NASA documents on a static page, I embedded NASA’s published standards, workforce statistics, and human-system risk frameworks directly into Space-Ready’s scoring thresholds, timeline logic, and countermeasure engine:'
+  'Rather than simply quoting NASA documents on a static page, we embedded NASA’s published standards, workforce statistics, and human-system risk frameworks directly into Space-Ready’s scoring thresholds, timeline logic, and countermeasure engine:'
 );
 
 drawBullet(
   'NASA OCHMO-STD-100.1A (Sept 2024 — Spaceflight Human-System Standard):',
-  'I used OCHMO-STD-100.1A to map the real preflight clinical checkpoint cadence (12-month annual physicals plus L-90/L-30 and L-9/L-6 fitness certifications) into our Risk Analysis views, and to calibrate our 4-tier Drift Classification boundaries around NASA’s −20% readiness decrement risk threshold (Red Alert).'
+  'We used OCHMO-STD-100.1A to map the real preflight clinical checkpoint cadence (12-month annual physicals plus L-90/L-30 and L-9/L-6 fitness certifications) into our Risk Analysis views, and to calibrate our 4-tier Drift Classification boundaries around NASA’s −20% readiness decrement risk threshold (Red Alert).'
 );
 drawBullet(
   'NASA OCHMO-TB-031 (Exercise Overview & L-60 Preflight Baseline Standards):',
-  'I anchored our Weeks 1–4 locked baseline logic and the Exercise pillar’s aerobic (60+ min) and axial resistance-loading questions directly to OCHMO-TB-031 L-60 standards (VO2max, strength, and musculoskeletal defense). Our Annual Rollup sign-off rule ("Ready for L-60") mathematically enforces keeping annual drift within 5 points of that standard.'
+  'We anchored our Weeks 1–4 locked baseline logic and the Exercise pillar’s aerobic (60+ min) and axial resistance-loading questions directly to OCHMO-TB-031 L-60 standards (VO2max, strength, and musculoskeletal defense). Our Annual Rollup sign-off rule ("Ready for L-60") mathematically enforces keeping annual drift within 5 points of that standard.'
 );
 drawBullet(
   'NASA Office of Inspector General Report IG-22-007 (Jan 2022):',
-  'I integrated the OIG audit’s verified workforce metrics—an active corps of 44 astronauts (down ~70% from ~150 in 2000) and a 15% safety margin (down from 50%)—into the dashboard and operational risk analysis to contextualize why even small preflight fitness drops create Single-Point-of-Failure schedule risk.'
+  'We integrated the OIG audit’s verified workforce metrics—an active corps of 44 astronauts (down ~70% from ~150 in 2000) and a 15% safety margin (down from 50%)—into the dashboard and operational risk analysis to contextualize why even small preflight fitness drops create Single-Point-of-Failure schedule risk.'
 );
 drawBullet(
   'NASA Human Research Program (HRP) & Frontiers in Physiology (Oct 2026):',
@@ -356,16 +356,16 @@ drawBullet(
 drawSectionHeading('Section 04', 'AI Disclosure (Generative AI Usage)');
 
 drawParagraph(
-  'In full transparency and alignment with NASA Space Apps Challenge guidelines, I utilized Generative AI tools during the creation of Space-Ready as follows:'
+  'In full transparency and alignment with NASA Space Apps Challenge guidelines, our team utilized Generative AI tools during the creation of Space-Ready as follows:'
 );
 
 drawBullet(
   'Code & Engineering Assistance:',
-  'I used Google Gemini-powered coding assistance within Google AI Studio to help scaffold modular React/TypeScript components, construct responsive Tailwind CSS v4 layouts, wire Recharts longitudinal charts, set up Zustand persistence, optimize image preloading, and configure the Node/Express server routes. I personally reviewed, tested, and verified all scoring formulas, 3-week rolling average calculations, baseline locking rules, and TypeScript builds.'
+  'We used Google Gemini-powered coding assistance within Google AI Studio to help scaffold modular React/TypeScript components, construct responsive Tailwind CSS v4 layouts, wire Recharts longitudinal charts, set up Zustand persistence, optimize image preloading, and configure the Node/Express server routes. Our team personally reviewed, tested, and verified all scoring formulas, 3-week rolling average calculations, baseline locking rules, and TypeScript builds.'
 );
 drawBullet(
   'Text & Technical Editing:',
-  'I used Generative AI to help draft and refine UI microcopy, question descriptions, countermeasure tips, and formatting of this submission brief. All NASA statistics, checkpoint schedules, document citations, and operational facts were independently cross-checked against the primary NASA OIG, OCHMO, HRP, and Frontiers in Physiology sources.'
+  'We used Generative AI to help draft and refine UI microcopy, question descriptions, countermeasure tips, and formatting of this submission brief. All NASA statistics, checkpoint schedules, document citations, and operational facts were independently cross-checked against the primary NASA OIG, OCHMO, HRP, and Frontiers in Physiology sources.'
 );
 drawBullet(
   'Graphics & Visual Media:',

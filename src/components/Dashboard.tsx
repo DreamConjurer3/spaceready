@@ -96,6 +96,16 @@ export const Dashboard: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 pointer-events-none" />
         <div className="absolute inset-0 bg-radial from-transparent via-black/30 to-black/80 pointer-events-none" />
 
+        {/* Visible AI Watermark on Hero Background Image */}
+        <div
+          className="absolute bottom-3 right-3 sm:bottom-5 sm:right-5 z-20 pointer-events-none select-none flex items-center gap-1.5 px-2.5 py-1 rounded bg-black/65 border border-white/25 backdrop-blur-sm text-[10px] font-mono font-semibold tracking-widest uppercase text-white/85 shadow-sm"
+          aria-label="AI-generated visual watermark"
+        >
+          <span className="text-purple-300 font-bold">AI</span>
+          <span className="text-white/40">·</span>
+          <span>AI-Generated Visual</span>
+        </div>
+
         {/* Content Panel */}
         <div className="relative z-10 py-16 px-4 sm:px-8 max-w-3xl mx-auto text-center flex flex-col items-center">
           {/* Transparent panel with subtle tech animated borderline */}
@@ -174,6 +184,14 @@ export const Dashboard: React.FC = () => {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-zinc-950 via-zinc-950/95 to-zinc-950/85 pointer-events-none" />
+
+        {/* Visible AI Watermark on Readiness Banner Background Image */}
+        <span
+          className="absolute bottom-2.5 right-3 z-10 pointer-events-none select-none text-[9px] font-mono tracking-widest uppercase text-zinc-400/80 bg-black/60 border border-white/15 px-1.5 py-0.5 rounded"
+          aria-label="AI-generated visual watermark"
+        >
+          AI-Generated Visual
+        </span>
 
         <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
           {/* Left: Composite Score & Status */}
